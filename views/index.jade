@@ -1,0 +1,38 @@
+extends layout
+
+// Define basic data fields using Jade's mixin features
+// Bind to those data fields for dynamic updates
+
+block styles
+  // link(rel='stylesheet', href='/stylesheets/dashboard.css')
+  link(rel='stylesheet', href='/stylesheets/vis.min.css')
+  link(rel='stylesheet', href='/stylesheets/basic.css')
+
+block scripts
+  // bind to the data fields defined in mixin
+  script(src='/socket.io/socket.io.js')
+  script(src='/javascripts/client.socket.io.js')
+  script(src='/javascripts/vis.min.js')
+  script(src='http://filamentgroup.github.com/EnhanceJS/enhance.js')
+  //script(src='/javascripts/canvasjs.min.js')
+  //script(src='https://www.google.com/jsapi')
+  script.
+    enhance({
+      loadScripts: [
+      {src: '/javascripts/excanvas.js', iecondition: 'all'}, '/javascripts/jquery.js','/javascripts/visualize.jQuery.js','/javascripts/example.js'],
+      loadStyles: ['/stylesheets/visualize.css','/stylesheets/visualize-light.css']});
+
+block content
+  div
+    table(id='myTable' style="display:none")
+      caption Twitter Tweet Counts
+      thead
+        tr
+          td Tweet Type
+      tbody
+        tr
+          th Total
+        tr
+          th Positive
+        tr
+          th Negative

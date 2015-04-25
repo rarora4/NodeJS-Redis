@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">
+    <!-- link(rel='stylesheet', href='/stylesheets/dashboard.css')-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-lg-4">
+        <h4>Love Hate percentage is independent of each</h4>
+        <div role="alert" class="alert alert-info">
+          <p id="total-count"></p><br>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/javascripts/jquery.min.js"></script>
+  <script src="/javascripts/bootstrap.min.js"></script>
+  <!-- bind to the data fields defined in mixin-->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- stream the actual from the data stream emitter-->
+  <script src="/javascripts/client.socket.io.js"></script>
+  <script src="/javascripts/canvasjs.min.js"></script>
+</html>
