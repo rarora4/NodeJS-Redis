@@ -12,8 +12,8 @@ function updateTable(result){
 		var c = $("#myTable tr:first td").length;
 			$("#myTable tr:first").append("<th>"+result.tweets[JSONLength-1].slot+"</th>");
 			$("#myTable tr:eq(1)").append("<td>"+result.tweets[JSONLength-1].count+"</td>");
-			$("#myTable tr:eq(2)").append("<td>"+result.tweets[JSONLength-1].count+"</td>");
-			$("#myTable tr:eq(3)").append("<td>"+result.tweets[JSONLength-1].count+"</td>");
+			$("#myTable tr:eq(2)").append("<td>"+result.tweets[JSONLength-1].positive+"</td>");
+			$("#myTable tr:eq(3)").append("<td>"+result.tweets[JSONLength-1].negative+"</td>");
 
 		/*if(JSONLength >= 13){
 			$('table tr:first').find('th:eq(0)').remove();
